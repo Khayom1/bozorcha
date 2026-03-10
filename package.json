@@ -1,0 +1,17 @@
+{
+  "name": "bozorcha-taj",
+  "version": "1.0.0",
+  "description": "Core backend for Bozorcha marketplace",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "bash scripts/deploy-functions.sh"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.0"
+  },
+  "devDependencies": {},
+  "author": "",
+  "license": "MIT"
+}
