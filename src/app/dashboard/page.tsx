@@ -37,4 +37,35 @@ export default function DashboardPage() {
             <p className="text-white/40 mt-1">Панели идоракунӣ</p>
           </div>
           
-          <div className
+          <div className="flex items-center gap-4">
+            <div className="glass px-4 py-2 rounded-lg">
+              <span className="text-sm text-white/60">{(new Date()).toLocaleDateString('tg-TJ', { 
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+              })}</span>
+            </div>
+            
+            <div className="w-10 h-10 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center">
+              <span className="font-semibold">A</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Stats Cards */}
+        <StatsCards />
+
+        {/* Charts */}
+        <div className="mt-8">
+          <SalesChart />
+        </div>
+
+        {/* Inventory Table */}
+        <div className="mt-8">
+          <InventoryTable />
+        </div>
+      </div>
+    </main>
+  )
+}
