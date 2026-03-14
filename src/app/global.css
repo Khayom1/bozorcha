@@ -1,0 +1,62 @@
+/* src/app/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #020617;
+    --surface: #0f172a;
+    --primary: #3b82f6;
+    --secondary: #8b5cf6;
+    --border: rgba(255, 255, 255, 0.06);
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-white;
+    letter-spacing: -0.02em;
+  }
+
+  /* Scrollbar Styling */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--surface);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(59, 130, 246, 0.3);
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(59, 130, 246, 0.5);
+  }
+}
+
+@layer components {
+  .glass {
+    @apply backdrop-blur-xl bg-surface/50 border border-white/5;
+  }
+
+  .glass-card {
+    @apply glass rounded-xl shadow-2xl;
+  }
+
+  .neon-red {
+    color: #f43f5e;
+    text-shadow: 0 0 10px rgba(244, 63, 94, 0.5);
+  }
+
+  .neon-emerald {
+    color: #10b981;
+    text-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
+  }
+}
